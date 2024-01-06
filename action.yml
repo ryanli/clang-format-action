@@ -1,0 +1,25 @@
+name: 'Clang formatter action'
+description: 'run clang-format on your latest commit'
+author: 'jayllyz'
+branding:
+  icon: 'check'
+  color: 'green'
+inputs:
+  check:
+    description: 'If true, will only check if the files are formatted correctly. If false, will format the files'
+    required: false
+    default: 'false'
+  style:
+    description: 'The style to use. Defaults to file (i.e. .clang-format in the root of the repository)'
+    default: 'file'
+  extensions:
+    description: 'File extensions to check. Defaults to .cpp, .hpp, .c, .h'
+    default: 'cpp,hpp,c,h'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.check }}
+    - ${{ inputs.style }}
+    - ${{ inputs.extensions }}
+
