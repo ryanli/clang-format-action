@@ -1,9 +1,9 @@
 # Clang formatter action
 
-![GitHub release](https://img.shields.io/github/v/release/jayllyz/clang-format-action?sort=semver)
+![GitHub release](https://img.shields.io/github/v/release/jayllyz/clang-format-action?sort=semver&logo=github)
 [![GitHub Repo stars](https://img.shields.io/github/stars/jayllyz/clang-format-action?logo=github&style=flat)](https://github.com/jayllyz/clang-format-action)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jayllyz/clang-format-action?logo=github)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&logo=github)
 
 This action runs clang-format on the latest commit.
 Many clang-format alternatives exist, I know, but i wanted to learn how to write a github action.
@@ -20,10 +20,9 @@ on:
   push:
     branches:
       - main
-    pull_request:
-      branches:
-        - main
-
+  pull_request:
+    branches:
+      - main
 jobs:
   format:
     runs-on: ubuntu-latest
