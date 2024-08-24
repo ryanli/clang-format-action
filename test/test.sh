@@ -14,6 +14,7 @@ mkdir temp_repository
 cd temp_repository || exit
 
 git config --global init.defaultBranch main
+git config --global --add safe.directory temp_repository
 
 git init
 git config user.name "Test User"

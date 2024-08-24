@@ -47,7 +47,7 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "clang-format ✅"
+          commit_message: "chore(style): clang format files"
           branch: ${{ github.head_ref }}
 ...
 ```
@@ -73,7 +73,7 @@ You can read more about the options here : [clang style docs](https://clang.llvm
 
 - [stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action)
 - [actions/checkout](https://github.com/actions/checkout)
-- [hcpsilva/clang-format-action](https//github.com/hcpsilva/clang-format-action)
+- [hcpsilva/clang-format-action](https://github.com/hcpsilva/clang-format-action)
 - [Mavrikant/clang-format-action](https://github.com/Mavrikant/clang-format-action)
 
 ## License

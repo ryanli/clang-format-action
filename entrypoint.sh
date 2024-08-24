@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-git config --global --add safe.directory /github/workspace
+git config --global --add safe.directory ${GITHUB_WORKSPACE}
 
 if [ "$4" != "latest" ]; then
     apk add --no-cache "clang$4-extra-tools"
