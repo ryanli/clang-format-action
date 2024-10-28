@@ -1,7 +1,7 @@
 ---
-name: 'Clang formatter action'
-description: 'run clang-format on your latest commit'
-author: 'jayllyz'
+name: 'git-clang-formatter'
+description: 'run git-clang-format against a base ref'
+author: 'ryanli'
 branding:
   icon: 'check'
   color: 'green'
