@@ -7,18 +7,21 @@ branding:
   color: 'green'
 inputs:
   check:
-    description: 'If true, will only check if the files are formatted correctly. If false, will format the files'
+    description: 'If true, will only check if the files are formatted correctly. If false, will format the files.'
     required: false
     default: 'false'
   style:
-    description: 'The style to use. Defaults to file (i.e. .clang-format in the root of the repository)'
+    description: 'The style to use. Defaults to file (i.e. .clang-format in the root of the repository).'
     default: 'file'
   extensions:
-    description: 'File extensions to check. Defaults to .cpp, .hpp, .c, .h'
+    description: 'File extensions to check. Defaults to .cpp, .hpp, .c, .h.'
     default: 'cpp,hpp,c,h'
   clang-version:
-    description: 'The major version of clang to use. Defaults to latest'
+    description: 'The major version of clang to use. Defaults to latest.'
     default: 'latest'
+  base-ref:
+    description: 'The base ref to be compared to for a git-clang-format run.'
+    default: 'HEAD^'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -27,4 +30,5 @@ runs:
     - ${{ inputs.style }}
     - ${{ inputs.extensions }}
     - ${{ inputs.clang-version }}
+    - ${{ inputs.base-ref }}
 ...
